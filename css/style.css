@@ -2,15 +2,16 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 a {
   text-decoration: none;
   color: currentColor;
 }
 :root {
-  --ref-size: 1.2rem;
+  --ref-size: 1.6rem;
 }
+
 /* UTILS */
 .d-block-large {
   display: none;
@@ -46,19 +47,26 @@ a {
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  height: calc(100vh - 100px);
 }
 /* NAVBAR */
 .small-col hr {
   opacity: 0.6;
 }
+.upper-navbar {
+  padding: 10px 0;
+}
 .upper-navbar > * {
-  padding: 12px;
+  padding: 5px 12px;
+}
+.upper-navbar > :first-child {
+  padding: 10px 10px 20px;
 }
 .lower-navbar > * {
   padding: 12px;
 }
 .upper-navbar .logo-large {
-  width: 176px;
+  width: 150px;
   margin: 0 15px;
 }
 .upper-navbar .logo-small {
@@ -86,23 +94,24 @@ a {
 .playlist-ref-list {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 17px;
 }
 .playlist-ref-list li {
   list-style-type: none;
+  font-size: calc(var(--ref-size) / 1.8);
 }
 .add-playlist {
-  font-size: var(--ref-size);
+  font-size: calc(var(--ref-size) / 1.4);
 }
 .add-playlist a {
   background-color: white;
-  padding: 0px 10px;
+  padding: 3px 10px;
   color: black;
   font-weight: bold;
-  font-size: calc(var(--ref-size) / 0.75);
+  font-size: var(--ref-size);
 }
 
-.playlist-ref > h4 {
+.playlist-ref > h3 {
   font-weight: 600;
 }
 .big-col {
@@ -121,20 +130,20 @@ a {
 /* MAIN ROW */
 .main-row {
   background-color: #141922;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 80px);
 }
 
 /* Player */
 .player {
   background-color: #282828;
-  height: 150px;
+  height: 100px;
   width: 100%;
   position: fixed;
   bottom: 0;
 }
 
 /* MEDIA */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 576px) {
   .small-col {
     width: 240px;
   }
@@ -154,7 +163,7 @@ a {
     margin: 0 auto;
   }
   .lower-navbar .user {
-    margin: 0 10px;
+    margin: 0 6px;
   }
   .lower-navbar > * {
     padding: 20px;
@@ -162,5 +171,8 @@ a {
   }
   .navbar-refs .ref {
     margin: 0 10px;
+  }
+  .upper-navbar > :nth-child(2) {
+    padding: 20px 0;
   }
 }
