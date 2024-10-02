@@ -30,7 +30,7 @@ a {
 }
 .navbar-refs .ref:hover {
   border-left: green 2px solid;
-  padding: 0 1rem;
+  padding: 0.5rem;
 }
 
 .small-ref-text {
@@ -60,7 +60,7 @@ a {
 
 .green-underline-left {
   border-left: green 2px solid;
-  padding: 0 1rem;
+  padding: 0.5rem;
 }
 
 /* COLS */
@@ -365,6 +365,9 @@ a {
   :root {
     --ref-size: 1.6rem;
   }
+  .green-underline-left {
+    padding: 0 1rem;
+  }
   .lower-navbar .badge {
     padding: 6px;
   }
@@ -395,6 +398,9 @@ a {
   }
   .navbar-refs .ref {
     margin: 0 10px;
+  }
+  .navbar-refs .ref:hover {
+    padding: 0 1rem;
   }
   .upper-navbar > :nth-child(2) {
     padding: 20px 0;
