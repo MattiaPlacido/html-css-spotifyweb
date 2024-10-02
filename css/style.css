@@ -44,7 +44,7 @@ a {
   border-radius: 50%;
   border: currentColor 1px solid;
 }
-.fa-regular {
+.fa-user {
   font-size: var(--ref-size);
   color: black;
 }
@@ -110,7 +110,7 @@ a {
   gap: 13px;
   overflow-y: auto;
   min-height: 100px;
-  max-height: 290px;
+  max-height: 250px;
 }
 .playlist-ref-list li {
   list-style-type: none;
@@ -149,13 +149,64 @@ a {
   height: 100%;
 }
 
-/* Player */
+/* PLAYER */
 .player {
   background-color: #282828;
   height: 100px;
   width: 100%;
   position: fixed;
   bottom: 0;
+  display: flex;
+}
+.player * {
+  /* outline: black 1px dashed; */
+  color: white;
+}
+
+.now-playing {
+  display: flex;
+  margin: 25px 10px;
+  gap: 5px;
+}
+
+.now-playing-info {
+  font-size: 0.7rem;
+  align-self: center;
+}
+
+.now-playing-info span {
+  opacity: 0.6;
+}
+
+.now-playing-refs {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  align-self: center;
+  margin-left: 15px;
+}
+
+.now-playing img {
+  padding: 5px;
+}
+
+.general-controls {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.progress-bar-container > .progress-bar {
+  height: 4px;
+  background-color: grey;
+  border-radius: 2px;
 }
 
 /* MEDIA */
