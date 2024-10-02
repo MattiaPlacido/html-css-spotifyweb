@@ -167,6 +167,7 @@ a {
   display: flex;
   margin: 25px 10px;
   gap: 5px;
+  flex-grow: 0;
 }
 
 .now-playing-info {
@@ -190,23 +191,74 @@ a {
   padding: 5px;
 }
 
+.player-controls {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+
 .general-controls {
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
+  max-width: 200px;
+  align-self: center;
+  gap: 20px;
+}
+
+.general-controls * {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.general-controls :nth-child(3) {
+  font-size: 2rem;
+  margin: -6px 15px 0;
 }
 
 .progress-bar-container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .progress-bar-container > .progress-bar {
   height: 4px;
   background-color: grey;
   border-radius: 2px;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.progress-bar-container > .progress-bar > .progress {
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+  position: relative;
+}
+
+.progress-bar-container:hover > .progress-bar > .progress {
+  background-color: greenyellow;
+}
+
+.progress-bar-container > .progress-bar > .progress::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  top: -5px;
+  right: -6px;
+}
+
+.player-refs {
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 
 /* MEDIA */
