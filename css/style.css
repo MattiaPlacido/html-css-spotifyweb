@@ -9,7 +9,7 @@ a {
   color: currentColor;
 }
 :root {
-  --ref-size: 1.6rem;
+  --ref-size: 2.6rem;
 }
 
 /* UTILS */
@@ -28,6 +28,11 @@ a {
 .ref:hover {
   opacity: 1;
 }
+.navbar-refs .ref:hover {
+  border-left: green 2px solid;
+  padding: 0 1rem;
+}
+
 .small-ref-text {
   font-size: calc(var(--ref-size) / 1.5);
 }
@@ -35,9 +40,17 @@ a {
   display: flex;
 }
 .badge {
+  padding: 10px;
   border-radius: 50%;
-  padding: 5px;
   border: currentColor 1px solid;
+}
+.fa-regular {
+  font-size: var(--ref-size);
+  color: black;
+}
+
+.bg-white {
+  background-color: white;
 }
 /* COLS */
 .small-col {
@@ -94,7 +107,10 @@ a {
 .playlist-ref-list {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 13px;
+  overflow-y: auto;
+  min-height: 100px;
+  max-height: 290px;
 }
 .playlist-ref-list li {
   list-style-type: none;
@@ -130,7 +146,7 @@ a {
 /* MAIN ROW */
 .main-row {
   background-color: #141922;
-  height: calc(100vh - 80px);
+  height: 100%;
 }
 
 /* Player */
@@ -144,6 +160,12 @@ a {
 
 /* MEDIA */
 @media screen and (min-width: 576px) {
+  :root {
+    --ref-size: 1.6rem;
+  }
+  .lower-navbar .badge {
+    padding: 6px;
+  }
   .small-col {
     width: 240px;
   }
