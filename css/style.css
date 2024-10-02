@@ -72,6 +72,8 @@ a {
   justify-content: space-between;
   color: white;
   height: calc(100vh - 100px);
+  position: sticky;
+  top: 0;
 }
 /* NAVBAR */
 .small-col hr {
@@ -113,15 +115,15 @@ a {
   margin: 0 auto;
 }
 .playlist-ref > * {
-  margin: 20px 0;
+  margin: 13px 0;
 }
 .playlist-ref-list {
   display: flex;
   flex-direction: column;
   gap: 13px;
-  overflow-y: auto;
   min-height: 100px;
   max-height: 250px;
+  overflow-y: scroll;
 }
 .playlist-ref-list li {
   list-style-type: none;
@@ -151,10 +153,9 @@ a {
 .top-row {
   background-color: #0c0f14;
   height: 120px;
-  position: fixed;
   top: 0;
   width: 100%;
-  position: relative;
+  position: sticky;
 }
 .top-row > .badge {
   padding: 15px 40px;
@@ -164,6 +165,7 @@ a {
   top: 20px;
   right: 10px;
   font-weight: bold;
+  font-size: 0.8rem;
 }
 .top-row > .badge:hover {
   font-size: 1.2rem;
@@ -176,7 +178,6 @@ a {
   display: flex;
   flex-direction: column;
   color: white;
-  overflow-y: scroll;
 }
 
 .main-page-refs {
@@ -188,6 +189,9 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  position: sticky;
+  top: 115px;
+  background-color: #141922;
 }
 .main-page-refs > .ref {
   padding: 20px;
@@ -196,6 +200,33 @@ a {
 .main-page-refs > .ref:hover {
   text-decoration: underline green 2px solid;
   text-underline-offset: 10px;
+}
+
+.wrapper {
+  overflow-y: scroll;
+}
+
+.main-row-section {
+  padding: 10px 0 20px 10px;
+}
+
+.card-list {
+  margin: 15px 0;
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card {
+  width: 47%;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+}
+.card-list .card .card-image {
+  width: 100%;
+  padding: 10px;
 }
 
 /* PLAYER */
@@ -324,6 +355,10 @@ a {
   margin: 0 20px;
   justify-content: center;
 }
+.player-refs * {
+  cursor: pointer;
+}
+
 .player-volume {
   display: flex;
   align-items: center;
