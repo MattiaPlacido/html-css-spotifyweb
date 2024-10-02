@@ -167,6 +167,7 @@ a {
   display: flex;
   margin: 20px 10px;
   gap: 5px;
+  width: 25%;
 }
 
 .now-playing-info {
@@ -196,6 +197,7 @@ a {
   flex-direction: column;
   justify-content: space-around;
   padding: 20px;
+  width: 45%;
 }
 
 .general-controls {
@@ -264,9 +266,11 @@ a {
 }
 .player-volume {
   display: flex;
-  width: 100%;
   align-items: center;
   gap: 5px;
+  min-width: 80px;
+  max-width: 200px;
+  width: 100%;
 }
 .player-volume > .volume-bar {
   height: 4px;
