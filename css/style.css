@@ -52,6 +52,17 @@ a {
 .bg-white {
   background-color: white;
 }
+
+.green-underline {
+  text-decoration: underline green 2px solid;
+  text-underline-offset: 10px;
+}
+
+.green-underline-left {
+  border-left: green 2px solid;
+  padding: 0 1rem;
+}
+
 /* COLS */
 .small-col {
   background-color: black;
@@ -162,6 +173,29 @@ a {
 .main-row {
   background-color: #141922;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow-y: scroll;
+}
+
+.main-page-refs {
+  width: 100%;
+  min-height: 60px;
+  max-height: 120px;
+  display: flex;
+  font-size: 0.7rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.main-page-refs > .ref {
+  padding: 20px;
+}
+
+.main-page-refs > .ref:hover {
+  text-decoration: underline green 2px solid;
+  text-underline-offset: 10px;
 }
 
 /* PLAYER */
@@ -183,6 +217,7 @@ a {
   margin: 20px 10px;
   gap: 5px;
   width: 25%;
+  justify-content: center;
 }
 
 .now-playing-info {
@@ -229,11 +264,11 @@ a {
 }
 .general-controls :nth-child(3) {
   font-size: 2rem;
-  margin: -6px 15px 0;
+  margin: -6px 10px 0;
 }
 .general-controls :nth-child(3):hover {
   font-size: 2.5rem;
-  margin: -11px 15px 0;
+  margin: -11px 10px 0;
 }
 
 .progress-bar-container {
@@ -287,6 +322,7 @@ a {
   gap: 10px;
   align-items: center;
   margin: 0 20px;
+  justify-content: center;
 }
 .player-volume {
   display: flex;
