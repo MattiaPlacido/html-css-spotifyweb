@@ -158,6 +158,7 @@ a {
   top: 0;
   width: 100%;
   position: sticky;
+  z-index: 1;
 }
 .top-row > .badge {
   padding: 15px 40px;
@@ -195,6 +196,7 @@ a {
   position: sticky;
   top: 100px;
   background-color: #141922;
+  z-index: 1;
 }
 .main-page-refs > .ref {
   padding: 15px;
@@ -205,12 +207,12 @@ a {
   text-underline-offset: 10px;
 }
 
-.wrapper {
-  overflow-y: scroll;
+.wrapper-main-section {
+  padding-bottom: 100px;
 }
 
 .main-row-section {
-  padding: 10px 0 50px 20px;
+  padding: 10px 5px 50px 10px;
 }
 
 .card-list {
@@ -227,6 +229,7 @@ a {
   flex-direction: column;
   margin: 7px 0;
   gap: 15px;
+  position: relative;
 }
 
 .card-title {
@@ -239,16 +242,45 @@ a {
   color: #787a80;
   font-weight: bold;
 }
-.card-list .card .card-image:hover {
+
+.card-image {
+  width: 100%;
+}
+
+.card-list .card:hover .card-image {
   opacity: 0.6;
   cursor: pointer;
 }
 .card-list .card .card-image:hover + .hide {
   display: inline;
 }
-.card .fa-circle-play {
-  font-size: calc(var(--ref-size) * 3);
+.card .fa-circle-play:hover {
+  cursor: pointer;
+  display: inline;
 }
+
+.card .fa-circle-play {
+  font-size: min(3.5rem, calc(var(--ref-size) * 3));
+}
+#recently-played .fa-circle-play {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#for-you-section .fa-circle-play {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#Popular-artists .fa-circle-play {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .main-row-section > span {
   color: #787a80;
   font-size: 0.7rem;
